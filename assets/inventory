@@ -1,0 +1,6 @@
+#!/bin/sh
+chown -R ldap:ldap /var/lib/inventory /etc/inventory
+chmod -R 755 /var/lib/inventory /etc/inventory
+chmod -R +r /etc/ssl/inventory
+ulimit -n 1024
+exec "$@"
